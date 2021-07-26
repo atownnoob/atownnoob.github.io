@@ -1,0 +1,137 @@
+* {
+	/* remove all margins and padding so that takes up full screen */
+	margin: 0;
+	padding: 0;
+	/* smooth scrolling between sections */
+	scroll-behavior: smooth;
+}
+
+
+
+header {
+	/* fix navbar container to top of page, remove gaps */
+	position: sticky;
+	top: 0;
+	
+	/* make into a flex container */
+	display: flex;
+	justify-content: flex-end;
+	
+	/* color and font formatting */
+	background-color: lightblue;
+	font-family: Arial, sans-serif;
+	
+}
+
+#navbar > ul {
+	
+	background-color: blue;
+		
+	display: flex;
+	justify-content: flex-end;
+
+}
+
+li {
+	background-color: lightblue;
+		
+	list-style-type: none;
+	padding: 10px;
+	margin: auto;
+	
+}
+
+a:link{
+	text-decoration: none;
+	color: white;
+}
+
+li:hover {
+	background-color: white;
+}
+
+section {
+	background-color: lightgreen;
+	/* note, if inculde border, will cause the vh unit test to fail. consider including border-box: box-sizing; attribute? */
+}
+
+#welcome-section {
+	/* locate text at absolute center of page */
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	
+	height: 100vh;
+	margin: auto;
+	
+	/* background and font formatting */
+	background-color: lightblue;
+	font-family: "Courier New", monospace;
+	font-size: 1.75em;
+	
+	
+}
+
+#projects {
+	/* give a bit of room from the welcome page */
+	/* also need some extra room to account for navbar */
+	padding-top: 60px;
+	
+}
+
+.tile-container {
+		
+		box-sizing: border-box;
+		
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;	
+}
+
+
+.project-tile {
+	border: 1px solid;
+	border-radius: 20px;
+	background-color: red;
+	box-shadow: 3px 5px;
+	
+	
+	padding: 20px;
+	margin: 10px;
+	width: 25vw;
+	height: 35vh;
+		
+	/* make all child items flex items, for ease of alignment */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	/* relative font size */
+	font-size: 1em;
+}
+
+#contact {
+	height: 80vh;
+	padding: 60px;
+}
+
+
+@media (max-width: 900px) {
+	.project-tile {
+			width: 35vw;
+			;
+	}
+}
+/* responsive section for small screens */
+@media (max-width: 650px) {
+	.project-tile {
+		width: 100vw;
+		
+	}
+	#welcome-section {
+		font-size: 1em;
+	}
+}
+
